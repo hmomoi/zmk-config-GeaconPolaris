@@ -47,6 +47,13 @@
         input-processors = <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_X_INVERT)>,
                            <&mouse_runtime_input_processor &scroll_runtime_input_processor_r>;
 
+        scroll {
+            layers = <1>;
+            input-processors = <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_X_INVERT)>,
+                               <&scroll_runtime_input_processor_r>;
+            process-next;
+        };
+
         arrow {
             layers = <2>;
             input-processors = <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_X_INVERT)>,
@@ -73,7 +80,7 @@
         status = "okay";
         device = <&stick_split>;
         
-        input-processors = <&scroll_runtime_input_processor>;
+        input-processors = <&scroll_runtime_input_processor_r>;
     };
     
     trackpad_listener: trackpad_listener {
@@ -81,8 +88,17 @@
         status = "okay";
         device = <&trackpad_split>;
         
-        input-processors = <&scroll_runtime_input_processor>;
+        input-processors = <&scroll_runtime_input_processor_r>;
     };
+    
+	scroll_runtime_input_processor_r: scroll_runtime_input_processor_r {
+		compatible = "zmk,input-processor-runtime";
+        processor-label = "ScrR";
+		type = <INPUT_EV_REL>;
+		track-remainders;
+		scale-divisor = <60>;
+		#input-processor-cells = <0>;
+	};   
 };
 
 &scroll_runtime_input_processor_r {
