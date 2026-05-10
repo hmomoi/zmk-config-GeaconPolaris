@@ -1,26 +1,6 @@
 config ZMK_SPLIT
     default y
 
-if SHIELD_Polaris_L_Base || SHIELD_Polaris_R_Base
-    config RETAINED_MEM
-        default y
-
-    config RETENTION
-        default y
-
-    config RETENTION_BOOT_MODE
-        default y
-
-    config ZMK_CDC_ACM_BOOTLOADER_TRIGGER
-        default y
-
-    config ZMK_CDC_ACM_BOOTLOADER_TRIGGER_DELAY_MS
-        default 100
-
-    config ZMK_CDC_ACM_BOOTLOADER_TRIGGER_POLL_MS
-        default 100
-endif
-
 if SHIELD_Polaris_L_Base
     config ZMK_KEYBOARD_NAME
         default "GeaconPolaris"
