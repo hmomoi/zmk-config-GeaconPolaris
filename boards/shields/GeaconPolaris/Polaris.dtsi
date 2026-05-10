@@ -1,13 +1,18 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 #include <physical_layouts.dtsi>
 #include <behaviors/rgbled_widget.dtsi>
-// #include <behaviors/battery_history_request.dtsi>
 
 / {
 	chosen {
 		zmk,physical-layout = &layout_Polaris;
       zmk,battery = &vbatt;
+      zephyr,boot-mode = &boot_mode0;
 	};
+
+   bootloader_trigger: bootloader_trigger {
+      compatible = "zmk,cdc-acm-bootloader-trigger";
+      cdc-port = <&snippet_zmk_usb_logging_uart>;
+   };
    
 	default_transform: keymap_transform_0 {
 		compatible = "zmk,matrix-transform";
@@ -145,4 +150,14 @@
 
 &adc {
    status = "okay";
+};
+
+&gpregret1 {
+   status = "okay";
+
+   boot_mode0: boot_mode@0 {
+      compatible = "zephyr,retention";
+      status = "okay";
+      reg = <0x0 0x1>;
+   };
 };

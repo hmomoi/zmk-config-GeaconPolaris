@@ -4,10 +4,12 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: te9no
       url-base: https://github.com/te9no
+    - name: cormoran
+      url-base: https://github.com/cormoran
   projects:
     - name: zmk
       # remote: zmkfirmware
-      remote: te9no
+      remote: cormoran
       revision: v0.3-branch+dya
       import: app/west.yml
     - name: zmk-rgbled-widget
@@ -37,18 +39,10 @@ manifest:
       revision: main
       url: https://github.com/te9no/zmk-input-processor-keybind
       path: modules/zmk-input-processor-keybind
-    - name: cirque-input-module
-      revision: main
-      url: https://github.com/petejohanson/cirque-input-module
-      path: modules/cirque-input-module
     - name: zmk-module-runtime-input-processor
       revision: main
       url: https://github.com/cormoran/zmk-module-runtime-input-processor
       path: modules/zmk-module-runtime-input-processor
-    - name: zmk-module-battery-history
-      revision: main
-      url: https://github.com/cormoran/zmk-module-battery-history
-      path: modules/zmk-module-battery-history
     - name: zmk-module-ble-management
       revision: main
       url: https://github.com/cormoran/zmk-module-ble-management
@@ -57,6 +51,23 @@ manifest:
       revision: main
       url: https://github.com/cormoran/zmk-module-settings-rpc
       path: modules/zmk-module-settings-rpc
+
+    - name: zmk-module-cirque-trackpad
+      revision: main
+      url: https://github.com/te9no/zmk-module-cirque-trackpad
+      path: modules/zmk-module-cirque-trackpad
+    - name: zmk-module-analoginput-rpc
+      revision: main
+      url: https://github.com/te9no/zmk-module-analoginput-rpc
+      path: modules/zmk-module-analoginput-rpc
+    - name: zmk-module-battery-nrf-vddh-oversampling
+      revision: main
+      url: https://github.com/te9no/zmk-module-battery-nrf-vddh-oversampling
+      path: modules/zmk-module-battery-nrf-vddh-oversampling
+    - name: zmk-feature-cdc-acm-bootloader-trigger
+      revision: main
+      url: https://github.com/cormoran/zmk-feature-cdc-acm-bootloader-trigger
+      path: modules/zmk-feature-cdc-acm-bootloader-trigger
   self:
     path: config
     
