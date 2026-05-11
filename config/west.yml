@@ -45,6 +45,10 @@ manifest:
       revision: main
       url: https://github.com/cormoran/zmk-module-runtime-input-processor
       path: modules/zmk-module-runtime-input-processor
+    - name: zmk-behavior-runtime-sensor-rotate
+      revision: main # or latest commit hash
+      url: https://github.com/cormoran/zmk-behavior-runtime-sensor-rotate
+      path: modules/zmk-behavior-runtime-sensor-rotate
     - name: zmk-module-ble-management
       revision: main
       url: https://github.com/cormoran/zmk-module-ble-management

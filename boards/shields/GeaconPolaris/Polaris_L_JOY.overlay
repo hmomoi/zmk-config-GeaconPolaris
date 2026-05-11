@@ -16,7 +16,7 @@
             mv-min-max = <1600>;
             mv-deadzone = <88>;
             scale-multiplier = <1>;
-            scale-divisor = <80>;
+            scale-divisor = <1>;
             output-min = <0>;
             output-max = <24>;
             invert;
@@ -31,7 +31,7 @@
             mv-min-max = <1600>;
             mv-deadzone = <88>;
             scale-multiplier = <1>;
-            scale-divisor = <80>;
+            scale-divisor = <1>;
             output-min = <0>;
             output-max = <24>;
             invert;
@@ -54,7 +54,7 @@
         processor-label = "ScrL";
 		type = <INPUT_EV_REL>;
 		track-remainders;
-		scale-divisor = <60>;
+		scale-divisor = <1>;
 		#input-processor-cells = <0>;
 	};   
 };
