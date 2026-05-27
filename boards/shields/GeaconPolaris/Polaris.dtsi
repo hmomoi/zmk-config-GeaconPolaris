@@ -83,29 +83,64 @@
             , <&key_physical_attrs 100 100 1575  450       0   425 (-25)>
             , <&key_physical_attrs 100 100 1675  450       0   425 (-25)>
             
-            , <&key_physical_attrs 100 100  650  200       0     0     0>
-            , <&key_physical_attrs 100 100  750  100       0     0     0>
-            , <&key_physical_attrs 100 100  750  200       0     0     0>
-            , <&key_physical_attrs 100 100  750  300       0     0     0>
-            , <&key_physical_attrs 100 100  850  200       0     0     0>
+            , <&key_physical_attrs  50  50  750  500       0     0     0>
+            , <&key_physical_attrs  50  50  800  450       0     0     0>
+            , <&key_physical_attrs  50  50  800  500       0     0     0>
+            , <&key_physical_attrs  50  50  800  550       0     0     0>
+            , <&key_physical_attrs  50  50  850  500       0     0     0>
 
             , <&key_physical_attrs 100 100  950  350       0 (-200) (-25)>
             , <&key_physical_attrs 100 100  900  450       0 (-150) (-25)>
             , <&key_physical_attrs 100 100 1000  450       0 (-150) (-25)>
 
-            , <&key_physical_attrs 100 100    0  500       0     0     0>
-            , <&key_physical_attrs 100 100  100  500       0     0     0>
+            , <&key_physical_attrs 100  50    0  500       0     0     0>
+            , <&key_physical_attrs 100  50  100  500       0     0     0>
             ;
 	};
 
-    position_map {
-        compatible = "zmk,physical-layout-position-map";
+   position_map {
+      compatible = "zmk,physical-layout-position-map";
 
-        layout_Polaris {
-            physical-layout = <&layout_Polaris>;
-            positions = <>;
-        };
-    };
+      layout_Polaris {
+         physical-layout = <&layout_Polaris>;
+         positions = <>;
+      };
+   };
+
+
+	analog_stick_layout: analog_stick_layout {
+		compatible = "zmk,physical-layout-custom-module";
+		display-name = "Analog Stick";
+		type = "analog-stick";
+		width = <100>;
+		height = <100>;
+		x = <350>;
+		y = <450>;
+		linked-device-identifiers = "analog_input_0";
+		linked-subsystems = "dya__studio";
+	};
+
+	trackball_layout: trackball_layout {
+		compatible = "zmk,physical-layout-trackball";
+		display-name = "Trackball";
+		size = <120>;
+		x = <930>;
+		y = <160>;
+		linked-device-identifiers = "trackball";
+		linked-subsystems = "zmk__trackball";
+	};
+
+	oled_layout: oled_layout {
+		compatible = "zmk,physical-layout-custom-module";
+		display-name = "OLED";
+		type = "display";
+		width = <70>;
+		height = <220>;
+		x = <750>;
+		y = <200>;
+		linked-device-identifiers = "oled";
+		linked-subsystems = "zmk__display";
+	};
 
    aliases {
       led-red = &led0;

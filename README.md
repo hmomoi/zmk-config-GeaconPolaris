@@ -2,7 +2,7 @@
 
 This repository contains the ZMK firmware configuration for the **GeaconPolaris**, a custom-designed ergonomic split keyboard. It's built to offer a highly personalized and efficient input experience, blending a unique physical layout with powerful firmware features.
 
-![Keymap](https://github.com/te9no/zmk-config-GeaconPolaris/blob/main/keymap-drawer/Polaris.svg)
+![Keymap](https://github.com/te9no/zmk-config-GeaconPolaris/blob/main/keymap-svg/Polaris.svg)
 
 ## Features
 
