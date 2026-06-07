@@ -103,7 +103,7 @@ manifest:
       path: modules/zmk-module-cirque-trackpad
     - name: zmk-driver-iqs9151-rpc
       remote: te9no
-      revision: main
+      revision: codex/polaris-iqs-unified-firmware
       path: modules/zmk-driver-iqs9151-rpc
     # - name: cirque-input-module
     #   revision: main
